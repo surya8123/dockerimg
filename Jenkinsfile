@@ -34,7 +34,7 @@ try {
     
    stage('Deploy') {
         sh "/bin/cp -f $WORKSPACE/Build-${env.BUILD_NUMBER}/vsvyadav_${env.BRANCH_NAME}${env.BUILD_NUMBER}.war /opt/tomcat/apache-tomcat-8.5.30/webapps/vsvyadav.war"
-        sh " sh /opt/tomcat/apache-tomcat-9.0.7/bin/startup.sh"
+        sh " sh /opt/tomcat/apache-tomcat-8.5.30/bin/startup.sh"
    }
   
    delivery.artifactory()
